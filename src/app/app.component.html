@@ -1,0 +1,19 @@
+<div class="wrapper">
+    <div class="header">
+        <div class="title">{{title}}</div>
+        <div *ngIf="isShown">This content is shown by condition</div>
+    </div>
+    <div class="status">Complete Status = {{isComplete}}</div>
+    <div class="status">count value = {{count}}</div>
+    <div class="buttonGroup">
+        <button (click)="increment()">Increment</button>
+        <button (click)="decrement()">decrement</button>
+        <button (click)="incrementByValue(2)">Increment by 2</button>
+        <button (click)="count=0">Reset</button>
+    </div>
+
+    <div class="hideAction">
+        <button (click)="toggleShown()">{{isShown?'Hide':'Show'}}</button>
+    </div>
+</div>
+<router-outlet></router-outlet>

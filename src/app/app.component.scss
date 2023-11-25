@@ -1,0 +1,31 @@
+.wrapper {
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: 100vh;
+    background-color: rgb(228, 226, 224);
+
+    .header {
+        display: flex;
+        padding-top: 40px;
+        gap: 12px;
+    }
+
+    .title  {
+        color: red;
+    }
+
+    .buttonGroup {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 500px;
+        padding-top: 20px;
+        
+    }
+
+    .hideAction {
+        padding-top: 20px;
+    }
+}
