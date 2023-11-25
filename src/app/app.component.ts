@@ -16,6 +16,12 @@ export class AppComponent {
   count = 0 ;
   disabled =  false;
   isShown = false;
+  productList= [
+    {value:'1', label:'Label1'},
+    {value:'2', label:'Label2'},
+    {value:'3', label:'Label3'},
+    {value:'4', label:'Label4'},
+  ];
 
   updateTitle(newTitle: string) {
     this.title = newTitle;

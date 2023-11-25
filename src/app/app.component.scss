@@ -28,4 +28,13 @@
     .hideAction {
         padding-top: 20px;
     }
+
+    .productList {
+        display: flex;
+        gap: 4px;
+        font-size: 14px;
+        font-weight: 500;
+        color: indigo;
+        padding-bottom: 4px;
+    }
 }
