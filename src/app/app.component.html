@@ -1,9 +1,9 @@
 <div class="wrapper">
     <div class="header">
         <div class="title">{{title}}</div>
-        <div *ngIf="isShown">This content is shown by condition</div>
+        <div *ngIf=" ">This content is shown by condition</div>
     </div>
-    <div class="status">Complete Status = {{isComplete}}</div>
+    <div class="status" [ngStyle]="{'background':'gray'}">Complete Status = {{isComplete}}</div>
     <div class="status">count value = {{count}}</div>
     <div class="buttonGroup">
         <button (click)="increment()">Increment</button>
@@ -17,7 +17,7 @@
         <button (click)="updateStatus()">{{isComplete?'As False':'As True'}}</button>
     </div>
     <p>Ng For Example</p>
-    <div class="productList">
+    <div class="productList">         
         <div  *ngFor="let product of productList">{{product.label}}</div>
     </div>
     <div appCustom>Directives</div>
