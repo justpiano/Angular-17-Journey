@@ -15,7 +15,7 @@ import { MainService } from './service/main/main.service';
 
 export class AppComponent {
   private mainService=inject(MainService);
-  title = 'Angular 17 Demo';
+  title = 'my-first-project';
   isComplete = false;
   count = 0 ;
   disabled =  false;
