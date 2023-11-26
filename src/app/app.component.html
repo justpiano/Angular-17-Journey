@@ -14,10 +14,12 @@
 
     <div class="hideAction">
         <button (click)="toggleShown()">{{isShown?'Hide':'Show'}}</button>
+        <button (click)="updateStatus()">{{isComplete?'As False':'As True'}}</button>
     </div>
     <p>Ng For Example</p>
     <div class="productList">
         <div  *ngFor="let product of productList">{{product.label}}</div>
     </div>
+    <div appCustom>Directives</div>
 </div>
 <router-outlet></router-outlet>

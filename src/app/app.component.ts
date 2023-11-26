@@ -2,14 +2,16 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import {MatSelectModule} from '@angular/material/select';
+import { CustomDirective } from './directives/custom.directive';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, MatSelectModule],
+  imports: [CommonModule, RouterOutlet, MatSelectModule, CustomDirective],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
+
 export class AppComponent {
   title = '123';
   isComplete = false;
@@ -27,8 +29,8 @@ export class AppComponent {
     this.title = newTitle;
   }
 
-  completeTask() {
-    this.isComplete = true;
+  updateStatus() {
+    this.isComplete = !this.isComplete;
   }
 
   increment () {
