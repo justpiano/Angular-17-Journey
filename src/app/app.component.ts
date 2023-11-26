@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import {MatSelectModule} from '@angular/material/select';
 import { CustomDirective } from './directives/custom.directive';
+import { MainService } from './service/main/main.service';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,8 @@ import { CustomDirective } from './directives/custom.directive';
 })
 
 export class AppComponent {
-  title = '123';
+  private mainService=inject(MainService);
+  title = 'Angular 17 Demo';
   isComplete = false;
   count = 0 ;
   disabled =  false;
@@ -24,6 +26,8 @@ export class AppComponent {
     {value:'3', label:'Label3'},
     {value:'4', label:'Label4'},
   ];
+
+  totalValue=this.mainService.sum(50 , 150);
 
   updateTitle(newTitle: string) {
     this.title = newTitle;

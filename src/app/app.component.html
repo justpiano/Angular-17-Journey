@@ -1,9 +1,16 @@
 <div class="wrapper">
     <div class="header">
         <div class="title">{{title}}</div>
-        <div *ngIf=" ">This content is shown by condition</div>
+        <div *ngIf="isShown; then thenBlock; else elseBlock"></div>
+        <ng-template #elseBlock>Current isShown001</ng-template>
+        <ng-template #thenBlock>Current isShown002</ng-template>
+
     </div>
-    <div class="status" [ngStyle]="{'background':'gray'}">Complete Status = {{isComplete}}</div>
+
+    <div *ngIf="isShown as value; else extraBlock">{{value}}</div>
+    <ng-template #extraBlock>AAA</ng-template>
+
+    <div class="status" [ngStyle]="{'background':'gray', 'width':'500px'}">Complete Status = {{isComplete}}</div>
     <div class="status">count value = {{count}}</div>
     <div class="buttonGroup">
         <button (click)="increment()">Increment</button>
@@ -21,5 +28,9 @@
         <div  *ngFor="let product of productList">{{product.label}}</div>
     </div>
     <div appCustom>Directives</div>
+    <div>
+        <h3>Service</h3>
+        <p>Total Value is {{totalValue}}</p>
+    </div>
 </div>
 <router-outlet></router-outlet>

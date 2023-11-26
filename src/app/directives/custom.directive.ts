@@ -10,6 +10,5 @@ export class CustomDirective {
   constructor() {
     this.el.nativeElement.style.background = 'cyan';
     this.el.nativeElement.style.width = '180px';
-    console.log('yellow: ', 'yellow');
   }
 }
