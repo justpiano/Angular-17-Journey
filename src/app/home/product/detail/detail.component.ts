@@ -15,6 +15,7 @@ export class DetailComponent implements OnInit {
   }
   detailId: string | undefined;
   initialValue:string | undefined;
+  productPrice= 500;
 
   ngOnInit(): void {
     this.initialValue='123'

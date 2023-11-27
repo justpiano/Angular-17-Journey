@@ -1,3 +1,10 @@
 .wrapper {
     padding: 20px;
+
+    .currency {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        padding-top: 4px;
+    }
 }
