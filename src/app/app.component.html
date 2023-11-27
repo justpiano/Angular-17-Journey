@@ -19,6 +19,8 @@
         <button (click)="count=0">Reset</button>
     </div>
 
+    <a title="details" [routerLink]="['detail', '33']">to Detail</a>
+
     <div class="hideAction">
         <button (click)="toggleShown()">{{isShown?'Hide':'Show'}}</button>
         <button (click)="updateStatus()">{{isComplete?'As False':'As True'}}</button>
@@ -33,4 +35,8 @@
         <p>Total Value is {{totalValue}}</p>
     </div>
 </div>
-<router-outlet></router-outlet>
+<main>
+    <router-outlet>
+    </router-outlet>
+</main>
+

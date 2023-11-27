@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import {MatSelectModule} from '@angular/material/select';
 import { CustomDirective } from './directives/custom.directive';
 import { MainService } from './service/main/main.service';
@@ -8,7 +8,7 @@ import { MainService } from './service/main/main.service';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, MatSelectModule, CustomDirective],
+  imports: [CommonModule, RouterOutlet, RouterModule,  MatSelectModule, CustomDirective],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
